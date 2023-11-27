@@ -44,7 +44,9 @@ function removeTodo(value) {
 
 function editTodo(value) {
   const input = value.parentElement.parentElement;
-  let newValue = prompt("Edit the value");
+  let newValue = prompt(
+    `Edit the new value to change with ${input.firstElementChild.innerHTML} existing value.`
+  );
   input.firstElementChild.innerHTML = newValue;
   console.log(input.firstElementChild.innerHTML);
 }
